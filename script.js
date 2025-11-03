@@ -5,7 +5,7 @@ async function fetchWeather() {
   const apiKey = "a02a7da6212ee6d0502bade0fce2c940"; // insert API key
 
   if (searchInput == "") {
-    weatherDataSection.style.fontFamily = "Josefin Sans, sans-serif";
+    // weatherDataSection.style.fontFamily = "Roboto Mono, monospace";
     weatherDataSection.innerHTML = `
     <div>
       <h2>Empty Input!</h2>
@@ -35,7 +35,7 @@ async function fetchWeather() {
 
     if (data.length == 0) {
       console.log("Something went wrong here.");
-      weatherDataSection.style.fontFamily = "Josefin Sans, sans-serif";
+      // weatherDataSection.style.fontFamily = "Roboto Mono, monospace";
       weatherDataSection.innerHTML = `
       <div>
         <h2>Invalid Input: "${searchInput}"</h2>
@@ -59,7 +59,7 @@ async function fetchWeather() {
     const data = await response.json();
 
     weatherDataSection.style.display = "flex";
-    weatherDataSection.style.fontFamily = "Josefin Sans, sans-serif";
+    // weatherDataSection.style.fontFamily = "Roboto Mono, monospace";
     weatherDataSection.innerHTML = `
     <img src="https://openweathermap.org/img/wn/${
       data.weather[0].icon
@@ -79,3 +79,4 @@ async function fetchWeather() {
     `;
   }
 }
+
